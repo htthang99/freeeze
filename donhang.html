@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel=" shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="base.css">
+    <script src="./lab4.js" defer></script>
+    <title>Đơn hàng</title>
+</head>
+<body onload="showCart()"> 
+    <header>
+        <a href="trangchu.html">
+            <img id="logo" src="images/logo.png" alt="Logo">
+        </a>
+
+        <div class="nav__wrap">
+            <nav>
+                <a href="trangchu.html">Trang chủ</a>
+                <a href="gioithieu.html">Giới thiệu</a>
+                <a href="sanpham.html">Sản phẩm</a>
+                <a href="tintuc.html">Tin tức</a>
+                <a href="dangnhap.html">Đăng nhập</a>
+                <a href="dangky.html">Đăng ký</a>
+                <a href="lienhe.html">Liên hệ</a>
+            </nav>
+            <form id="form1" class="nav__search" action="timkiem.html" method="get" target="_blank">
+                <input id="myInput" type="text" name="search" placeholder="Nhập nội dung cần tìm...">
+                <a id="myBtn" href="" onclick="submitEvent()"><i class="fas fa-search icon text-white"></i></a>
+                <a href="donhang.html" target="_blank"><i class="fas fa-shopping-cart icon text-pink"></i></a>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <h1 class="heading1 heading">Chi tiết đơn hàng</h1>
+            <table class="order-table">
+                <thead>
+                    <tr>
+                        <th>Hình SP</th>
+                        <th>Tên SP</th>
+                        <th>Số lượng</th>
+                        <th>Giá</th>
+                        <th>Thành Tiền</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="cartDetail">
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6" align="right"><span id="total"></span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" align="right"><span id="discount"></span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" align="right"><span id="vat"></span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" align="right"><span id="total-order"></span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" align="center"><button>Xác Nhận Đơn Hàng</button></td>
+                    </tr>
+                </tdfoot>
+            </table>
+        </article>
+    </main>
+
+    <footer>
+        <span class="footer__item">&copy;2021 Bản quyền thuộc về FreezeVN.</span>
+        <span class="footer__item">
+            <a class="footer__link" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="footer__link" href=""><i class="fab fa-twitter"></i></a>
+            <a class="footer__link" href=""><i class="fab fa-pinterest"></i></a>
+        </span>
+        <span class="footer__item">
+            <a href="#logo"><img width="80px" height="80px" src="./images/top.png" alt=""></a>
+        </span>
+    </footer>
+</body>
+</html>

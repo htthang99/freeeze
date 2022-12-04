@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel=" shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="base.css">
+    <script src="./lab4.js" defer></script>
+    <title>Liên hệ</title>
+</head>
+<body>
+    <header>
+        <a href="trangchu.html">
+            <img id="logo" src="images/logo.png" alt="Logo">
+        </a>
+
+        <div class="nav__wrap">
+            <nav>
+                <a href="trangchu.html">Trang chủ</a>
+                <a href="gioithieu.html">Giới thiệu</a>
+                <a href="sanpham.html">Sản phẩm</a>
+                <a href="tintuc.html">Tin tức</a>
+                <a href="dangnhap.html">Đăng nhập</a>
+                <a href="dangky.html">Đăng ký</a>
+                <a href="lienhe.html">Liên hệ</a>
+            </nav>
+            <form id="form1" class="nav__search" action="timkiem.html" method="get" target="_blank">
+                <input id="myInput" type="text" name="search" placeholder="Nhập nội dung cần tìm...">
+                <a id="myBtn" href="" onclick="submitEvent()"><i class="fas fa-search icon text-white"></i></a>
+                <a href="donhang.html" target="_blank"><i class="fas fa-shopping-cart icon text-pink"></i></a>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <section class="section__contact">
+                <h1 class="heading1 heading">Liên hệ</h1>
+                <div class="contact__img"><img width="12px" src="images/lienhe/check-in.png" alt=""></div>
+                <h1>Địa chỉ: 0123, Tòa Nhà ABC, TP. Cần Thơ</h1>
+                <span>Nếu bạn có góp ý, vui lòng liên hệ bằng thư điện tử hoặc sử dụng biểu mẫu bên dưới. Xin cảm ơn.</span>
+            </section>
+
+            <section>
+                <form action="" method="POST" enctype="application/x-www-form-urlencoded" onsubmit="return frmValidate5(this);" target="_blank">
+                    <fieldset>
+                        <legend class="heading1 heading">GÓP Ý</legend>
+                        <table>
+                            <tr>
+                                <td>
+                                    <label for="fname"><i class="icon text-white fas fa-user"></i></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="fname" name="fname" minlength="4" required placeholder="Vui lòng nhập Họ tên của bạn">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="email"><i class="icon text-white fas fa-envelope"></i></label>
+                                </td>
+                                <td>
+                                    <input type="text" id="email" name="email" pattern="^[azA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" required placeholder="Vui lòng nhập địa chỉ Email">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="email"><i class="icon text-white fas fa-list"></i></label>
+                                </td>
+                                <td>
+                                    <select size="1">
+                                        <option value="" selected>Về Sản Phẩm/ Dịch Vụ</option>
+                                        <option value="">Về Ưu Đãi Thành Viên</option>
+                                        <option value="">Về Tin Tuyển Dụng</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="vertical-bottom">
+                                    <label for="ftext"><i class="icon text-white far fa-sticky-note"></i></label>
+                                </td>
+                                <td>
+                                    <textarea name="ftext" id="ftext" placeholder="Nội dung cần liên hệ" rows="7" cols="50" minlength="10"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="submit" value="Gửi">
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <span class="footer__item">&copy;2021 Bản quyền thuộc về FreezeVN.</span>
+        <span class="footer__item">
+            <a class="footer__link" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="footer__link" href=""><i class="fab fa-twitter"></i></a>
+            <a class="footer__link" href=""><i class="fab fa-pinterest"></i></a>
+        </span>
+        <span class="footer__item">
+            <a href="#logo"><img width="80px" height="80px" src="./images/top.png" alt=""></a>
+        </span>
+    </footer>
+</body>
+</html>
